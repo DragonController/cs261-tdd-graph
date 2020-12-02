@@ -8,5 +8,5 @@ import functools
 
 class Graph:
 
-    pass
-
+    def __init__(self):
+        self.data = dict()

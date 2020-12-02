@@ -22,12 +22,12 @@ class TestGraph(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate Graph.")
 
-    # def test_internal(self):
-    #     """
-    #     A graph uses an 'adjacency list' to represent vertices and edges.
-    #     """
-    #     g = Graph()
-    #     self.assertEqual(dict, type(g.data))
+    def test_internal(self):
+        """
+        A graph uses an 'adjacency list' to represent vertices and edges.
+        """
+        g = Graph()
+        self.assertEqual(dict, type(g.data))
 
     """
     Empty graphs.
