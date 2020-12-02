@@ -40,13 +40,13 @@ class TestGraph(unittest.TestCase):
         g = Graph()
         self.assertFalse(g.adjacent('A', 'B'))
 
-    # def test_neighbors_empty(self):
-    #     """
-    #     Asking for the neighbors of any vertex in an empty graph returns an empty
-    #     list.
-    #     """
-    #     g = Graph()
-    #     self.assertEqual([], g.neighbors('A'))
+    def test_neighbors_empty(self):
+        """
+        Asking for the neighbors of any vertex in an empty graph returns an empty
+        list.
+        """
+        g = Graph()
+        self.assertEqual([], g.neighbors('A'))
 
     # def test_add_vertex_empty(self):
     #     """

@@ -13,3 +13,6 @@ class Graph:
 
     def adjacent(self, vertex1, vertex2):
         return False
+
+    def neighbors(self, vertex):
+        return []
