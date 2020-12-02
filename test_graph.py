@@ -33,12 +33,12 @@ class TestGraph(unittest.TestCase):
     Empty graphs.
     """
 
-    # def test_adjacent_empty(self):
-    #     """
-    #     An empty graph has no vertices, so adjacent returns false.
-    #     """
-    #     g = Graph()
-    #     self.assertFalse(g.adjacent('A', 'B'))
+    def test_adjacent_empty(self):
+        """
+        An empty graph has no vertices, so adjacent returns false.
+        """
+        g = Graph()
+        self.assertFalse(g.adjacent('A', 'B'))
 
     # def test_neighbors_empty(self):
     #     """

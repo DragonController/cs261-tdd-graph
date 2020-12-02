@@ -10,3 +10,6 @@ class Graph:
 
     def __init__(self):
         self.data = dict()
+
+    def adjacent(self, vertex1, vertex2):
+        return False
