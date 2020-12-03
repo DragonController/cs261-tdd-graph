@@ -16,3 +16,6 @@ class Graph:
 
     def neighbors(self, vertex):
         return []
+
+    def add_vertex(self, vertex):
+        self.data['A'] = []
