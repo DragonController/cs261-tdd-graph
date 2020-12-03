@@ -112,16 +112,16 @@ class TestGraph(unittest.TestCase):
         g.data['A'] = []
         self.assertEqual([], g.neighbors('A'))
 
-    # def test_add_vertex_one(self):
-    #     """
-    #     When storing a new vertex in a graph with a single vertex, the graph
-    #     adds the new vertex and associates an empty list of neighbors.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     g.add_vertex('B')
-    #     self.assertEqual([], g.data['B'])
-    #     self.assertEqual([], g.data['A'])
+    def test_add_vertex_one(self):
+        """
+        When storing a new vertex in a graph with a single vertex, the graph
+        adds the new vertex and associates an empty list of neighbors.
+        """
+        g = Graph()
+        g.data['A'] = []
+        g.add_vertex('B')
+        self.assertEqual([], g.data['B'])
+        self.assertEqual([], g.data['A'])
 
     # def test_add_vertex_existing(self):
     #     """
