@@ -133,15 +133,15 @@ class TestGraph(unittest.TestCase):
         g.add_vertex('A')
         self.assertEqual(['FAKE'], g.data['A'])
 
-    # def test_remove_vertex_one(self):
-    #     """
-    #     Removing a vertex from a graph removes its entry from the graph's
-    #     adjacency list.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     g.remove_vertex('A')
-    #     self.assertRaises(KeyError, operator.itemgetter('A'), g.data)
+    def test_remove_vertex_one(self):
+        """
+        Removing a vertex from a graph removes its entry from the graph's
+        adjacency list.
+        """
+        g = Graph()
+        g.data['A'] = []
+        g.remove_vertex('A')
+        self.assertRaises(KeyError, operator.itemgetter('A'), g.data)
 
     # def test_add_edge_one(self):
     #     """
