@@ -19,6 +19,8 @@ class Graph:
         return False
 
     def neighbors(self, vertex):
+        if vertex in self.data:
+            return self.data[vertex]
         return []
 
     def add_vertex(self, vertex):

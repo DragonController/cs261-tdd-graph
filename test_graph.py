@@ -183,16 +183,16 @@ class TestGraph(unittest.TestCase):
         self.assertFalse(g.adjacent('A', 'FAKE'))
         self.assertFalse(g.adjacent('B', 'A'))
 
-    # def test_neighbors_two(self):
-    #     """
-    #     Asking for the neighbors of any vertex returns a list of its neighbors.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = ['B', 'FAKE']
-    #     g.data['B'] = ['A']
-    #     self.assertEqual(['B', 'FAKE'], g.neighbors('A'))
-    #     self.assertEqual(['A'], g.neighbors('B'))
-    #     self.assertEqual([], g.neighbors('FAKE'))
+    def test_neighbors_two(self):
+        """
+        Asking for the neighbors of any vertex returns a list of its neighbors.
+        """
+        g = Graph()
+        g.data['A'] = ['B', 'FAKE']
+        g.data['B'] = ['A']
+        self.assertEqual(['B', 'FAKE'], g.neighbors('A'))
+        self.assertEqual(['A'], g.neighbors('B'))
+        self.assertEqual([], g.neighbors('FAKE'))
 
     # def test_remove_vertex_two(self):
     #     """
