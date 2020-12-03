@@ -170,18 +170,18 @@ class TestGraph(unittest.TestCase):
     Graphs with two vertices.
     """
 
-    # def test_adjacent_two(self):
-    #     """
-    #     A vertex, v2, is a neighbor of v1 when v2 is present in v1's list of neighbors.
-    #     Note: Neighbors should indeed be present in each others' list of neighbors,
-    #     but this isn't the job of the `adjacent` method.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = ['B']
-    #     g.data['B'] = []  # Intentionally minimal. See the Note above.
-    #     self.assertTrue(g.adjacent('A', 'B'))
-    #     self.assertFalse(g.adjacent('A', 'FAKE'))
-    #     self.assertFalse(g.adjacent('B', 'A'))
+    def test_adjacent_two(self):
+        """
+        A vertex, v2, is a neighbor of v1 when v2 is present in v1's list of neighbors.
+        Note: Neighbors should indeed be present in each others' list of neighbors,
+        but this isn't the job of the `adjacent` method.
+        """
+        g = Graph()
+        g.data['A'] = ['B']
+        g.data['B'] = []  # Intentionally minimal. See the Note above.
+        self.assertTrue(g.adjacent('A', 'B'))
+        self.assertFalse(g.adjacent('A', 'FAKE'))
+        self.assertFalse(g.adjacent('B', 'A'))
 
     # def test_neighbors_two(self):
     #     """

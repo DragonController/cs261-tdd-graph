@@ -12,6 +12,10 @@ class Graph:
         self.data = dict()
 
     def adjacent(self, vertex1, vertex2):
+        if vertex1 in self.data:
+            for neighbor in self.data[vertex1]:
+                if vertex2 == neighbor:
+                    return True
         return False
 
     def neighbors(self, vertex):
