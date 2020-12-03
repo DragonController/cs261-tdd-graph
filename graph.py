@@ -29,6 +29,8 @@ class Graph:
 
     def remove_vertex(self, vertex):
         if vertex in self.data:
+            for neighbor in self.neighbors(vertex):
+                self.data[neighbor].remove(vertex)
             del self.data[vertex]
 
     def add_edge(self, vertex1, vertex2):
