@@ -155,16 +155,16 @@ class TestGraph(unittest.TestCase):
         except KeyError:
             self.fail("Adding invalid edge raised a KeyError")
 
-    # def test_remove_edge_one(self):
-    #     """
-    #     Removing an edge that does not exist does nothing.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     try:
-    #         g.remove_edge('A', 'B')
-    #     except KeyError:
-    #         self.fail("Removing nonexistent edge raised a KeyError")
+    def test_remove_edge_one(self):
+        """
+        Removing an edge that does not exist does nothing.
+        """
+        g = Graph()
+        g.data['A'] = []
+        try:
+            g.remove_edge('A', 'B')
+        except KeyError:
+            self.fail("Removing nonexistent edge raised a KeyError")
 
     """
     Graphs with two vertices.
