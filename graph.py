@@ -18,7 +18,8 @@ class Graph:
         return []
 
     def add_vertex(self, vertex):
-        self.data[vertex] = []
+        if not vertex in self.data:
+            self.data[vertex] = []
 
     def remove_vertex(self, vertex):
         if vertex in self.data:

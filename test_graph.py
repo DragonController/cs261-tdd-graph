@@ -123,15 +123,15 @@ class TestGraph(unittest.TestCase):
         self.assertEqual([], g.data['B'])
         self.assertEqual([], g.data['A'])
 
-    # def test_add_vertex_existing(self):
-    #     """
-    #     When adding a vertex that already exists, the graph does not modify the
-    #     existing vertex.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = ['FAKE']
-    #     g.add_vertex('A')
-    #     self.assertEqual(['FAKE'], g.data['A'])
+    def test_add_vertex_existing(self):
+        """
+        When adding a vertex that already exists, the graph does not modify the
+        existing vertex.
+        """
+        g = Graph()
+        g.data['A'] = ['FAKE']
+        g.add_vertex('A')
+        self.assertEqual(['FAKE'], g.data['A'])
 
     # def test_remove_vertex_one(self):
     #     """
