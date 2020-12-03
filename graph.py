@@ -34,7 +34,7 @@ class Graph:
             del self.data[vertex]
 
     def add_edge(self, vertex1, vertex2):
-        if vertex1 in self.data and vertex2 in self.data:
+        if vertex1 in self.data and vertex2 in self.data and not self.adjacent(vertex1, vertex2):
             self.data[vertex1].append(vertex2)
             self.data[vertex2].append(vertex1)
 
