@@ -56,17 +56,17 @@ class TestGraph(unittest.TestCase):
         g.add_vertex('A')
         self.assertEqual([], g.data['A'])
 
-    # def test_remove_vertex_nonexistent(self):
-    #     """
-    #     When removing a vertex that does not exist, nothing happens.
-    #     Hint: Just pass for now.
-    #     """
-    #     g = Graph()
-    #     try:
-    #         g.remove_vertex('A')
-    #     except KeyError:
-    #         self.fail('Removing a key raised an error.')
-    #     self.assertEqual({}, g.data)
+    def test_remove_vertex_nonexistent(self):
+        """
+        When removing a vertex that does not exist, nothing happens.
+        Hint: Just pass for now.
+        """
+        g = Graph()
+        try:
+            g.remove_vertex('A')
+        except KeyError:
+            self.fail('Removing a key raised an error.')
+        self.assertEqual({}, g.data)
 
     # def test_add_edge_nonexistent(self):
     #     """
