@@ -143,17 +143,17 @@ class TestGraph(unittest.TestCase):
         g.remove_vertex('A')
         self.assertRaises(KeyError, operator.itemgetter('A'), g.data)
 
-    # def test_add_edge_one(self):
-    #     """
-    #     Adding an edge between an existing vertex and one that does not exist
-    #     does nothing.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     try:
-    #         g.add_edge('A', 'B')
-    #     except KeyError:
-    #         self.fail("Adding invalid edge raised a KeyError")
+    def test_add_edge_one(self):
+        """
+        Adding an edge between an existing vertex and one that does not exist
+        does nothing.
+        """
+        g = Graph()
+        g.data['A'] = []
+        try:
+            g.add_edge('A', 'B')
+        except KeyError:
+            self.fail("Adding invalid edge raised a KeyError")
 
     # def test_remove_edge_one(self):
     #     """
