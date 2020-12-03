@@ -23,3 +23,6 @@ class Graph:
     def remove_vertex(self, vertex):
         if vertex in self.data:
             del self.data[vertex]
+
+    def add_edge(self, vertex1, vertex2):
+        return True

@@ -68,16 +68,16 @@ class TestGraph(unittest.TestCase):
             self.fail('Removing a key raised an error.')
         self.assertEqual({}, g.data)
 
-    # def test_add_edge_nonexistent(self):
-    #     """
-    #     Adding an edge between two vertices that do not exist does nothing.
-    #     Hint: Just pass for now.
-    #     """
-    #     g = Graph()
-    #     try:
-    #         g.add_edge('A', 'B')
-    #     except KeyError:
-    #         self.fail("Adding invalid edge raised a KeyError")
+    def test_add_edge_nonexistent(self):
+        """
+        Adding an edge between two vertices that do not exist does nothing.
+        Hint: Just pass for now.
+        """
+        g = Graph()
+        try:
+            g.add_edge('A', 'B')
+        except KeyError:
+            self.fail("Adding invalid edge raised a KeyError")
 
     # def test_remove_edge_nonexistent(self):
     #     """
