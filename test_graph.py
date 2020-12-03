@@ -205,22 +205,22 @@ class TestGraph(unittest.TestCase):
         self.assertRaises(KeyError, operator.itemgetter('A'), g.data)
         self.assertEqual([], g.data['B'])
 
-    # def test_add_edge_two(self):
-    #     """
-    #     Adding an edge between two vertices adds each vertex to both of their
-    #     neighbor lists.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = []
-    #     g.data['B'] = []
-    #     g.add_edge('A', 'B')
-    #     self.assertEqual(['B'], g.data['A'])
-    #     self.assertEqual(['A'], g.data['B'])
-    #     g.data['A'] = []
-    #     g.data['B'] = []
-    #     g.add_edge('B', 'A')
-    #     self.assertEqual(['B'], g.data['A'])
-    #     self.assertEqual(['A'], g.data['B'])
+    def test_add_edge_two(self):
+        """
+        Adding an edge between two vertices adds each vertex to both of their
+        neighbor lists.
+        """
+        g = Graph()
+        g.data['A'] = []
+        g.data['B'] = []
+        g.add_edge('A', 'B')
+        self.assertEqual(['B'], g.data['A'])
+        self.assertEqual(['A'], g.data['B'])
+        g.data['A'] = []
+        g.data['B'] = []
+        g.add_edge('B', 'A')
+        self.assertEqual(['B'], g.data['A'])
+        self.assertEqual(['A'], g.data['B'])
 
     # def test_add_edge_existing_two(self):
     #     """
