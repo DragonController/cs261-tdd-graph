@@ -79,16 +79,16 @@ class TestGraph(unittest.TestCase):
         except KeyError:
             self.fail("Adding invalid edge raised a KeyError")
 
-    # def test_remove_edge_nonexistent(self):
-    #     """
-    #     Removing an edge that does not exist does nothing.
-    #     Hint: Just pass for now.
-    #     """
-    #     g = Graph()
-    #     try:
-    #         g.remove_edge('A', 'B')
-    #     except KeyError:
-    #         self.fail("Removing nonexistent edge raised a KeyError")
+    def test_remove_edge_nonexistent(self):
+        """
+        Removing an edge that does not exist does nothing.
+        Hint: Just pass for now.
+        """
+        g = Graph()
+        try:
+            g.remove_edge('A', 'B')
+        except KeyError:
+            self.fail("Removing nonexistent edge raised a KeyError")
 
     """
     Single-vertex graph.

@@ -26,3 +26,6 @@ class Graph:
 
     def add_edge(self, vertex1, vertex2):
         return True
+
+    def remove_edge(self, vertex1, vertex2):
+        return True
