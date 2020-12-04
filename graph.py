@@ -42,3 +42,6 @@ class Graph:
         if self.adjacent(vertex1, vertex2):
             self.data[vertex1].remove(vertex2)
             self.data[vertex2].remove(vertex1)
+
+    def v(self):
+        return len(self.data)

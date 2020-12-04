@@ -348,16 +348,16 @@ class TestGraph(unittest.TestCase):
     Properties
     """
 
-    # def test_v(self):
-    #     """
-    #     |V| is the number of vertices in a graph.
-    #     """
-    #     g = Graph()
-    #     g.add_vertex('A')
-    #     self.assertEqual(1, g.v())
-    #     g.add_vertex('B')
-    #     g.add_vertex('C')
-    #     self.assertEqual(3, g.v())
+    def test_v(self):
+        """
+        |V| is the number of vertices in a graph.
+        """
+        g = Graph()
+        g.add_vertex('A')
+        self.assertEqual(1, g.v())
+        g.add_vertex('B')
+        g.add_vertex('C')
+        self.assertEqual(3, g.v())
 
     # def test_e(self):
     #     """
