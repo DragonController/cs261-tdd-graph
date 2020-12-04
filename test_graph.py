@@ -307,16 +307,16 @@ class TestGraph(unittest.TestCase):
         self.assertEqual(['A', 'B'], g.data['C'])
         self.assertEqual(['A'], g.data['D'])
 
-    # def test_remove_vertex(self):
-    #     """
-    #     Removing a vertex also removes its edges.
-    #     Hint: Be efficient. Traversing all the vertices (keys) is inefficient.
-    #     """
-    #     g = larger_graph()
-    #     g.remove_vertex('A')
-    #     self.assertEqual(['C'], g.data['B'])
-    #     self.assertEqual(['B'], g.data['C'])
-    #     self.assertEqual([], g.data['D'])
+    def test_remove_vertex(self):
+        """
+        Removing a vertex also removes its edges.
+        Hint: Be efficient. Traversing all the vertices (keys) is inefficient.
+        """
+        g = larger_graph()
+        g.remove_vertex('A')
+        self.assertEqual(['C'], g.data['B'])
+        self.assertEqual(['B'], g.data['C'])
+        self.assertEqual([], g.data['D'])
 
     # def test_add_edge(self):
     #     """
