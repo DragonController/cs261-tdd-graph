@@ -45,3 +45,9 @@ class Graph:
 
     def v(self):
         return len(self.data)
+
+    def e(self):
+        total = 0
+        for vertex in self.data:
+            total += len(self.data[vertex])
+        return total / 2

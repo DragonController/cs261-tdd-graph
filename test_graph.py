@@ -359,16 +359,16 @@ class TestGraph(unittest.TestCase):
         g.add_vertex('C')
         self.assertEqual(3, g.v())
 
-    # def test_e(self):
-    #     """
-    #     |E| is the number of edges in a graph.
-    #     Hint: There's an easy way - read or look it up?
-    #     Bonus: Try reduce.
-    #     """
-    #     g = larger_graph()
-    #     self.assertEqual(4, g.e())
-    #     g.add_edge('D', 'B')
-    #     self.assertEqual(5, g.e())
+    def test_e(self):
+        """
+        |E| is the number of edges in a graph.
+        Hint: There's an easy way - read or look it up?
+        Bonus: Try reduce.
+        """
+        g = larger_graph()
+        self.assertEqual(4, g.e())
+        g.add_edge('D', 'B')
+        self.assertEqual(5, g.e())
 
 
 def larger_graph():
