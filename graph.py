@@ -39,4 +39,6 @@ class Graph:
             self.data[vertex2].append(vertex1)
 
     def remove_edge(self, vertex1, vertex2):
-        return True
+        if self.adjacent(vertex1, vertex2):
+            self.data[vertex1].remove(vertex2)
+            self.data[vertex2].remove(vertex1)
