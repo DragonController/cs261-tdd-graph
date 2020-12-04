@@ -318,18 +318,18 @@ class TestGraph(unittest.TestCase):
         self.assertEqual(['B'], g.data['C'])
         self.assertEqual([], g.data['D'])
 
-    # def test_add_edge(self):
-    #     """
-    #     Adding an edge between two vertices connects them as adjacent neighbors.
-    #     """
-    #     g = larger_graph()
-    #     g.add_edge('D', 'B')
-    #     self.assertEqual(['A', 'C', 'D'], g.data['B'])
-    #     self.assertEqual(['A', 'B'], g.data['D'])
-    #     self.assertTrue(g.adjacent('B', 'D'))
-    #     self.assertTrue(g.adjacent('D', 'B'))
-    #     self.assertEqual(['B', 'C', 'D'], g.data['A'])
-    #     self.assertEqual(['A', 'B'], g.data['C'])
+    def test_add_edge(self):
+        """
+        Adding an edge between two vertices connects them as adjacent neighbors.
+        """
+        g = larger_graph()
+        g.add_edge('D', 'B')
+        self.assertEqual(['A', 'C', 'D'], g.data['B'])
+        self.assertEqual(['A', 'B'], g.data['D'])
+        self.assertTrue(g.adjacent('B', 'D'))
+        self.assertTrue(g.adjacent('D', 'B'))
+        self.assertEqual(['B', 'C', 'D'], g.data['A'])
+        self.assertEqual(['A', 'B'], g.data['C'])
 
     # def test_remove_edge(self):
     #     """
