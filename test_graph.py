@@ -295,17 +295,17 @@ class TestGraph(unittest.TestCase):
         self.assertEqual(['A', 'B'], g.neighbors('C'))
         self.assertEqual(['A'], g.neighbors('D'))
 
-    # def test_add_vertex(self):
-    #     """
-    #     Adding a vertex to a graph only creates a new entry in the adjacency list.
-    #     """
-    #     g = larger_graph()
-    #     g.add_vertex('E')
-    #     self.assertEqual([], g.data['E'])
-    #     self.assertEqual(['B', 'C', 'D'], g.data['A'])
-    #     self.assertEqual(['A', 'C'], g.data['B'])
-    #     self.assertEqual(['A', 'B'], g.data['C'])
-    #     self.assertEqual(['A'], g.data['D'])
+    def test_add_vertex(self):
+        """
+        Adding a vertex to a graph only creates a new entry in the adjacency list.
+        """
+        g = larger_graph()
+        g.add_vertex('E')
+        self.assertEqual([], g.data['E'])
+        self.assertEqual(['B', 'C', 'D'], g.data['A'])
+        self.assertEqual(['A', 'C'], g.data['B'])
+        self.assertEqual(['A', 'B'], g.data['C'])
+        self.assertEqual(['A'], g.data['D'])
 
     # def test_remove_vertex(self):
     #     """
