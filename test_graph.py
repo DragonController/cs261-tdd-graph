@@ -285,15 +285,15 @@ class TestGraph(unittest.TestCase):
         self.assertFalse(g.adjacent('C', 'D'))
         self.assertFalse(g.adjacent('D', 'C'))
 
-    # def test_neighbors(self):
-    #     """
-    #     Vertices that share an edge are neighbors.
-    #     """
-    #     g = larger_graph()
-    #     self.assertEqual(['B', 'C', 'D'], g.neighbors('A'))
-    #     self.assertEqual(['A', 'C'], g.neighbors('B'))
-    #     self.assertEqual(['A', 'B'], g.neighbors('C'))
-    #     self.assertEqual(['A'], g.neighbors('D'))
+    def test_neighbors(self):
+        """
+        Vertices that share an edge are neighbors.
+        """
+        g = larger_graph()
+        self.assertEqual(['B', 'C', 'D'], g.neighbors('A'))
+        self.assertEqual(['A', 'C'], g.neighbors('B'))
+        self.assertEqual(['A', 'B'], g.neighbors('C'))
+        self.assertEqual(['A'], g.neighbors('D'))
 
     # def test_add_vertex(self):
     #     """
