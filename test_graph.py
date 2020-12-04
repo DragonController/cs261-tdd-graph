@@ -251,17 +251,17 @@ class TestGraph(unittest.TestCase):
         self.assertEqual([], g.data['A'])
         self.assertEqual([], g.data['B'])
 
-    # def test_remove_edge_nonexisting_two(self):
-    #     """
-    #     Removing an edge that does not exist does nothing.
-    #     """
-    #     g = Graph()
-    #     g.data['A'] = ['FAKE']
-    #     g.data['B'] = ['FAKE 2']
-    #     g.remove_edge('A', 'B')
-    #     g.remove_edge('B', 'A')
-    #     self.assertEqual(['FAKE'], g.data['A'])
-    #     self.assertEqual(['FAKE 2'], g.data['B'])
+    def test_remove_edge_nonexisting_two(self):
+        """
+        Removing an edge that does not exist does nothing.
+        """
+        g = Graph()
+        g.data['A'] = ['FAKE']
+        g.data['B'] = ['FAKE 2']
+        g.remove_edge('A', 'B')
+        g.remove_edge('B', 'A')
+        self.assertEqual(['FAKE'], g.data['A'])
+        self.assertEqual(['FAKE 2'], g.data['B'])
 
     """
     Larger graphs
