@@ -331,18 +331,18 @@ class TestGraph(unittest.TestCase):
         self.assertEqual(['B', 'C', 'D'], g.data['A'])
         self.assertEqual(['A', 'B'], g.data['C'])
 
-    # def test_remove_edge(self):
-    #     """
-    #     Removing an edge disconnects two vertices.
-    #     """
-    #     g = larger_graph()
-    #     g.remove_edge('A', 'B')
-    #     self.assertEqual(['C', 'D'], g.data['A'])
-    #     self.assertEqual(['C'], g.data['B'])
-    #     self.assertFalse(g.adjacent('A', 'B'))
-    #     self.assertFalse(g.adjacent('B', 'A'))
-    #     self.assertEqual(['A', 'B'], g.data['C'])
-    #     self.assertEqual(['A'], g.data['D'])
+    def test_remove_edge(self):
+        """
+        Removing an edge disconnects two vertices.
+        """
+        g = larger_graph()
+        g.remove_edge('A', 'B')
+        self.assertEqual(['C', 'D'], g.data['A'])
+        self.assertEqual(['C'], g.data['B'])
+        self.assertFalse(g.adjacent('A', 'B'))
+        self.assertFalse(g.adjacent('B', 'A'))
+        self.assertEqual(['A', 'B'], g.data['C'])
+        self.assertEqual(['A'], g.data['D'])
 
     """
     Properties
