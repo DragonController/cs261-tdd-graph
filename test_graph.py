@@ -267,23 +267,23 @@ class TestGraph(unittest.TestCase):
     Larger graphs
     """
 
-    # def test_adjacent(self):
-    #     """
-    #     Two vertices are adjacent if they share an edge.
-    #     """
-    #     g = larger_graph()
-    #     self.assertTrue(g.adjacent('A', 'B'))
-    #     self.assertTrue(g.adjacent('B', 'A'))
-    #     self.assertTrue(g.adjacent('A', 'C'))
-    #     self.assertTrue(g.adjacent('C', 'A'))
-    #     self.assertTrue(g.adjacent('A', 'D'))
-    #     self.assertTrue(g.adjacent('D', 'A'))
-    #     self.assertTrue(g.adjacent('B', 'C'))
-    #     self.assertTrue(g.adjacent('C', 'B'))
-    #     self.assertFalse(g.adjacent('B', 'D'))
-    #     self.assertFalse(g.adjacent('D', 'B'))
-    #     self.assertFalse(g.adjacent('C', 'D'))
-    #     self.assertFalse(g.adjacent('D', 'C'))
+    def test_adjacent(self):
+        """
+        Two vertices are adjacent if they share an edge.
+        """
+        g = larger_graph()
+        self.assertTrue(g.adjacent('A', 'B'))
+        self.assertTrue(g.adjacent('B', 'A'))
+        self.assertTrue(g.adjacent('A', 'C'))
+        self.assertTrue(g.adjacent('C', 'A'))
+        self.assertTrue(g.adjacent('A', 'D'))
+        self.assertTrue(g.adjacent('D', 'A'))
+        self.assertTrue(g.adjacent('B', 'C'))
+        self.assertTrue(g.adjacent('C', 'B'))
+        self.assertFalse(g.adjacent('B', 'D'))
+        self.assertFalse(g.adjacent('D', 'B'))
+        self.assertFalse(g.adjacent('C', 'D'))
+        self.assertFalse(g.adjacent('D', 'C'))
 
     # def test_neighbors(self):
     #     """
